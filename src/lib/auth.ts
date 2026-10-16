@@ -38,6 +38,10 @@ export const auth = betterAuth({
   database: mongodbAdapter(db),
   baseURL: process.env.BETTER_AUTH_URL || "http://localhost:3000",
   secret: process.env.BETTER_AUTH_SECRET,
+  trustedOrigins: [
+    "https://bajar-dor-bay.vercel.app",
+    "http://localhost:3000"
+  ],
   emailAndPassword: {
     enabled: true,
   },
