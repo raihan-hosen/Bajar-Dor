@@ -1,0 +1,38 @@
+import type { Metadata } from "next";
+import { Hind_Siliguri } from "next/font/google";
+import { Toaster } from "react-hot-toast";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import "./globals.css";
+
+const hindSiliguri = Hind_Siliguri({
+  subsets: ["bengali", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+export const metadata: Metadata = {
+  title: "বাজার দর (BazarDor)",
+  description: "নিত্যপ্রয়োজনীয় দ্রব্যের দৈনিক বাজার দর ও পরিসংখ্যান",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="bn" data-theme="light">
+      <body
+        suppressHydrationWarning
+        className={`${hindSiliguri.className} antialiased bg-[#f4f6f2] text-gray-900 min-h-screen flex flex-col`}
+      >
+        <Navbar />
+        <main className="flex-1">{children}</main>
+        <Footer />
+        <ScrollToTop />
+        <Toaster position="top-center" />
+      </body>
+    </html>
+  );
+}
