@@ -1,81 +1,72 @@
-<div align="center">
+# 🛒 বাজার দর (Bazar Dor)
 
-# 🛒 BazarDor (বাজার দর)
+## 📖 Short Description
+**Bazar Dor** is a modern, responsive web application built to help users track the daily market prices of essential commodities in Bangladesh. It features real-time price fluctuation tracking, categorized product browsing, secure user authentication, and detailed market-wise price summaries. 
 
-**A high-performance, responsive commodity price tracker providing real-time grocery insights across Dhaka's key markets.**
-
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://bazar-dor-lamiakajal.vercel.app)
-[![Repository](https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/lamiakajal/bazar-dor)
-
-[![Next.js](https://img.shields.io/badge/Next.js_15-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-
-</div>
-
----
-
-## 📌 Overview
-
-**BazarDor** simplifies daily grocery shopping decisions by providing transparency into market prices. It aggregates daily commodity rates across wholesale and retail wet markets (Karwan Bazar, Sadar Bazar, Mirpur Green Market), formatting all pricing metrics and fluctuations into localized Bengali numerals alongside automated trend analysis.
-
----
-
-## 🌐 Deployment & Repository
-
-| Service            | Link                                                                               |
-| :----------------- | :--------------------------------------------------------------------------------- |
-| **Production URL** | [https://bazar-dor-lamiakajal.vercel.app](https://bazar-dor-lamiakajal.vercel.app) |
-| **Source Code**    | [https://github.com/lamiakajal/bazar-dor](https://github.com/lamiakajal/bazar-dor) |
-
----
-
-## 🛠️ Architecture & Tech Stack
-
-| Category           | Technology                                                                      | Purpose                                          |
-| :----------------- | :------------------------------------------------------------------------------ | :----------------------------------------------- |
-| **Framework**      | [Next.js (App Router)](https://nextjs.org/)                                     | Hybrid Server & Client Rendering, API proxying   |
-| **Language**       | [TypeScript](https://www.typescriptlang.org/)                                   | End-to-end type safety                           |
-| **Styling**        | [Tailwind CSS](https://tailwindcss.com/)                                        | Responsive UI components & custom layouts        |
-| **Authentication** | [BetterAuth](https://better-auth.com/)                                          | Email/Password, Google & GitHub OAuth            |
-| **Database**       | [MongoDB Atlas](https://www.mongodb.com/atlas)                                  | Persistent storage for users, sessions, and logs |
-| **Icons & Alerts** | [Lucide React](https://lucide.dev/) / [Hot Toast](https://react-hot-toast.com/) | Visual assets & non-blocking toast notifications |
+🔗 **Live Link:** [Insert Live Link Here]
+🔗 **GitHub Repository:** [Insert Repo Link Here]
 
 ---
 
 ## ✨ Key Features
 
-1. **Live Market Ticker & Fluctuation Trends**
-   - Continuous auto-scrolling ticker under the primary navigation bar highlighting intraday price movements.
-   - Automated algorithmic sorting for **Top Risers (আজ দাম বেড়েছে ▲)** and **Top Fallers (আজ দাম কমেছে ▼)**.
-
-2. **Complete Native Localization**
-   - Dynamic real-time calculation and formatting of the localized Bengali calendar date.
-   - Universal translation pipeline formatting prices, rates, and unit measurements into standard Bengali numerals.
-
-3. **Dynamic Category Browsing & Numerical Sorting**
-   - Instant category filters across staple produce (Rice, Lentils, Oil, Vegetables, Fish, and Meat).
-   - Tri-state numerical sorting engine (**ডিফল্ট**, **দাম: কম থেকে বেশি**, **দাম: বেশি থেকে কম**) resolving prices via parsed numeric values rather than raw character strings.
-
-4. **Protected Product Details & Market Breakdown**
-   - Middleware-level route security guarding commodity breakdown pages (`/product/[slug]`), automatically re-routing guest visitors to `/signin`.
-   - Cross-market pricing breakdowns comparing wholesale and neighborhood market rates.
-
-5. **Integrated Authentication & Account Management**
-   - Multi-provider authentication using BetterAuth supporting OAuth 2.0 (Google, GitHub) and traditional email/password credentials.
-   - Profile configuration module (`/profile/update`) with direct database mutation.
+1. **Live Price Ticker & Fluctuation Tracking:** An infinite scrolling marquee in the navbar displays current prices and percentage changes (▲/▼). The home page highlights the top 6 price risers ("আজ দাম বেড়েছে") and top 6 fallers ("আজ দাম কমেছে").
+2. **Advanced Sorting with Bengali Numerals:** Users can sort category products by price (Default, Low to High, High to Low), with the sorting algorithm fully supporting Bengali numerical characters.
+3. **Protected Product Details:** Authenticated users can view detailed insights for specific items, including minimum, maximum, and average prices, alongside a breakdown of prices across different local markets.
+4. **Secure Authentication & Profile Management:** Seamless and secure Sign Up and Sign In flows using BetterAuth (supporting both Email/Password and Social Login). Users can also securely update their profile information.
+5. **Robust UX & Responsive Design:** A fully responsive UI across all devices (Mobile, Tablet, Desktop) featuring loading skeletons for data fetching, interactive toast notifications for user actions, and a friendly, custom 404 error page.
 
 ---
 
-## 🚀 Getting Started
+## 🛠️ Technologies Used
 
-### 1. Prerequisites
+* **Framework:** Next.js (App Router)
+* **Language:** TypeScript / JavaScript
+* **Styling:** Tailwind CSS (with DaisyUI / Hero UI)
+* **Authentication:** BetterAuth
+* **Notifications:** react-hot-toast / data-rht-toaster
+* **Deployment:** Vercel / Netlify / Cloudflare Pages
 
-Ensure you have **Node.js (v18+)** and **npm** installed on your machine.
+---
 
-### 2. Clone the Repository
+## ⚙️ Getting Started Locally
 
-```bash
-git clone [https://github.com/lamiakajal/bazar-dor.git](https://github.com/lamiakajal/bazar-dor.git)
-cd bazar-dor
-```
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone <your-github-repo-link>
+   cd bazar-dor
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or yarn install / pnpm install
+   ```
+
+3. **Set up Environment Variables:**
+   Create a `.env.local` file in the root directory and add the necessary environment variables for BetterAuth and your API URLs:
+   ```env
+   NEXT_PUBLIC_API_URL=https://openapi.programming-hero.com/api/bazardor
+   # Add BetterAuth secrets and NextAuth URLs here
+   ```
+
+4. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+5. **Open the app:**
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser to see the result.
+
+---
+
+## 📡 API Endpoints Used
+
+* **Base URL:** `https://openapi.programming-hero.com/api/bazardor` (or alternative workers)
+* `GET /products` - Fetch all products
+* `GET /products?category={category_name}` - Filter products by category
+* `GET /products/{id}` - Fetch single product details
+* `GET /categories` - Fetch all categories
+* `GET /categories/{category_name}` - Fetch a single category
